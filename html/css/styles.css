@@ -30,3 +30,15 @@ a {
 a:visited {
   color: royalblue;
 }
+
+.lying {
+  display: flex;
+}
+
+.aicenter {
+  align-items: center;
+}
+
+.cg10 {
+  column-gap: 10px;
+}

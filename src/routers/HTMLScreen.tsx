@@ -1,19 +1,19 @@
 import { Link, Outlet } from "react-router-dom";
 
 const HTMLScreen = () => {
-  const tags = ["div", "header", "footer"];
+  const tags = ["texts"];
   return (
     <>
-      <div id="tag">
-        <Outlet />
-      </div>
-      <div style={{}}>
+      <div>
         {tags.map((tag, i) => (
-          <Link key={i} to={`/html/${tag}`}>
+          <Link key={i} to={`${tag}`}>
             {`< ${tag} />`}
           </Link>
         ))}
       </div>
+      {/* <div id="tag"> */}
+      <Outlet />
+      {/* </div> */}
     </>
   );
 };
