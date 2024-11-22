@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect, useState } from "react";
-import { Outlet, useParams, useSearchParams } from "react-router-dom";
+import { useCallback, useEffect, useState } from "react";
+import { useParams, useSearchParams } from "react-router-dom";
 import { employees } from "../imgs/data";
 
 const HTMLTarget = () => {
@@ -12,18 +12,6 @@ const HTMLTarget = () => {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const onClick = useCallback(() => {
-    // const isTrue = confirm(
-    //   "are you sure? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque nesciunt aliquam, assumenda omnis deserunt ex suscipit praesentium? 확인을 누르시면 실행됩니다."
-    // );
-    // if (isTrue) {
-    //   alert("확인함");
-    // } else {
-    //   alert("cancel");
-    // }
-    // const name = { first: "dexter", last: "" };
-    // let name = { first: "dexter", last: "" };
-    // const name, dob, address;
-    // var name, dob, address;
     const name = prompt("What is your name?");
     const age = prompt("How old are you?");
     setName(name ?? "");

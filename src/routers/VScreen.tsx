@@ -1,18 +1,15 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const VScreen = () => {
   const ref = useRef<HTMLIFrameElement | null>(null);
-  const hoverOnOriginal = useCallback(
-    (e: any) => {
-      if (ref.current) {
-        const vid = ref.current!;
-        if (vid) {
-          vid.oncanplay;
-        }
+  const hoverOnOriginal = useCallback(() => {
+    if (ref.current) {
+      const vid = ref.current!;
+      if (vid) {
+        vid.oncanplay;
       }
-    },
-    [ref]
-  );
+    }
+  }, [ref]);
   const [scroll, setScroll] = useState(0);
   useEffect(() => {
     if (typeof window !== "undefined") {
